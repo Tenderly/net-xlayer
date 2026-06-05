@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common/bitutil"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-xlayer/common/bitutil"
+	"github.com/tenderly/net-xlayer/common/hexutil"
+	"github.com/tenderly/net-xlayer/crypto"
 )
 
 type bytesBacked interface {

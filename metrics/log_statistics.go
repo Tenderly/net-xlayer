@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/log"
 )
 
 // LogTag enumerates metric keys used by the block statistics logger.

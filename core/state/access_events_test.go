@@ -20,9 +20,9 @@ import (
 	"math"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/trie/utils"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/params"
+	"github.com/tenderly/net-xlayer/trie/utils"
 )
 
 var (

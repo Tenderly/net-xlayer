@@ -8,7 +8,7 @@ package rocksdb
 import (
 	"errors"
 
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/tenderly/net-xlayer/ethdb"
 )
 
 var ErrRocksDBNotSupported = errors.New("rocksdb support is not enabled. Compile with 'rocksdb' build tag and ensure RocksDB C++ library is installed")

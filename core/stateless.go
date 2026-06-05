@@ -17,18 +17,18 @@
 package core
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/lru"
-	"github.com/ethereum/go-ethereum/consensus/beacon"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/stateless"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/trie"
-	"github.com/ethereum/go-ethereum/triedb"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/lru"
+	"github.com/tenderly/net-xlayer/consensus/beacon"
+	"github.com/tenderly/net-xlayer/consensus/ethash"
+	"github.com/tenderly/net-xlayer/core/state"
+	"github.com/tenderly/net-xlayer/core/stateless"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/core/vm"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/params"
+	"github.com/tenderly/net-xlayer/trie"
+	"github.com/tenderly/net-xlayer/triedb"
 )
 
 // ExecuteStateless runs a stateless execution based on a witness, verifies

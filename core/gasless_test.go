@@ -20,12 +20,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/state"
+	"github.com/tenderly/net-xlayer/core/tracing"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/core/vm"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 // Minimal EVM bytecode stubs used by these tests. They ignore calldata and

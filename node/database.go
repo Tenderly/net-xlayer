@@ -19,12 +19,12 @@ package node
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/ethdb/leveldb"
-	"github.com/ethereum/go-ethereum/ethdb/pebble"
-	"github.com/ethereum/go-ethereum/ethdb/rocksdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-xlayer/core/rawdb"
+	"github.com/tenderly/net-xlayer/ethdb"
+	"github.com/tenderly/net-xlayer/ethdb/leveldb"
+	"github.com/tenderly/net-xlayer/ethdb/pebble"
+	"github.com/tenderly/net-xlayer/ethdb/rocksdb"
+	"github.com/tenderly/net-xlayer/log"
 )
 
 // DatabaseOptions contains the options to apply when opening a database.

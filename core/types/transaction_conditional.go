@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/math"
 )
 
 // KnownAccounts represents a set of KnownAccounts

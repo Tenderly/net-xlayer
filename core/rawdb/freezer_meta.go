@@ -22,8 +22,8 @@ import (
 	"math"
 	"os"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/rlp"
 )
 
 const (

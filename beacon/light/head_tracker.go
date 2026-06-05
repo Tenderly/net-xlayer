@@ -21,10 +21,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/beacon/params"
-	"github.com/ethereum/go-ethereum/beacon/types"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-xlayer/beacon/params"
+	"github.com/tenderly/net-xlayer/beacon/types"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/log"
 )
 
 // HeadTracker keeps track of the latest validated head and the "prefetch" head

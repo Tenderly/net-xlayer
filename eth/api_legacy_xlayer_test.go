@@ -12,14 +12,14 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/internal/ethapi/override"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/hexutil"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/eth/ethconfig"
+	"github.com/tenderly/net-xlayer/eth/filters"
+	"github.com/tenderly/net-xlayer/internal/ethapi"
+	"github.com/tenderly/net-xlayer/internal/ethapi/override"
+	"github.com/tenderly/net-xlayer/rpc"
 )
 
 // Mock implementations for testing

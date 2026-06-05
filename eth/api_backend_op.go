@@ -1,8 +1,8 @@
 package eth
 
 import (
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/rpc"
 )
 
 func (b *EthAPIBackend) HistoricalRPCService() *rpc.Client {

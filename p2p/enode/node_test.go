@@ -25,8 +25,8 @@ import (
 	"testing"
 	"testing/quick"
 
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-xlayer/p2p/enr"
+	"github.com/tenderly/net-xlayer/rlp"
 	"github.com/stretchr/testify/assert"
 )
 

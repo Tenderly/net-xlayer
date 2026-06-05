@@ -21,9 +21,9 @@ import (
 	"math"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/tracing"
+	"github.com/tenderly/net-xlayer/params"
 	"github.com/holiman/uint256"
 )
 

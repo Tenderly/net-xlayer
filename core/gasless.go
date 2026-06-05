@@ -20,10 +20,10 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/core/vm"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 // gaslessProbeGasLimit caps the gas spent on a single getGaslessAllowance call.

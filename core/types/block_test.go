@@ -23,13 +23,13 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/blocktest"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/hexutil"
+	"github.com/tenderly/net-xlayer/common/math"
+	"github.com/tenderly/net-xlayer/crypto"
+	"github.com/tenderly/net-xlayer/internal/blocktest"
+	"github.com/tenderly/net-xlayer/params"
+	"github.com/tenderly/net-xlayer/rlp"
 	"github.com/holiman/uint256"
 )
 

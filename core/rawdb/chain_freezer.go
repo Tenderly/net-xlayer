@@ -22,11 +22,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb/eradb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/rawdb/eradb"
+	"github.com/tenderly/net-xlayer/ethdb"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 const (

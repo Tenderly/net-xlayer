@@ -23,7 +23,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-xlayer/common"
 )
 
 func TestGaslessAddressFor(t *testing.T) {

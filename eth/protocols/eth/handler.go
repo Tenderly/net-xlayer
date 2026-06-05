@@ -20,15 +20,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/txpool"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core"
+	"github.com/tenderly/net-xlayer/core/txpool"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/metrics"
+	"github.com/tenderly/net-xlayer/p2p"
+	"github.com/tenderly/net-xlayer/p2p/enode"
+	"github.com/tenderly/net-xlayer/p2p/enr"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 const (

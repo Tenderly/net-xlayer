@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 // precompiledTest defines the input/output pairs for precompiled contract tests.

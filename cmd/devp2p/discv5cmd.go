@@ -22,9 +22,9 @@ import (
 	"slices"
 	"time"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/v5test"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/p2p/discover"
+	"github.com/tenderly/net-xlayer/cmd/devp2p/internal/v5test"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/p2p/discover"
 	"github.com/urfave/cli/v2"
 )
 

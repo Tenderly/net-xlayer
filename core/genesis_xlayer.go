@@ -3,11 +3,11 @@
 package core
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/rawdb"
+	"github.com/tenderly/net-xlayer/ethdb"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 // This ensures the database is the single source of truth for chain configuration,

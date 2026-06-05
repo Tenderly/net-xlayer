@@ -23,11 +23,11 @@ import (
 	"math"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/rawdb"
+	"github.com/tenderly/net-xlayer/ethdb"
+	"github.com/tenderly/net-xlayer/ethdb/memorydb"
+	"github.com/tenderly/net-xlayer/log"
 )
 
 const (

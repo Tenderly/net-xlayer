@@ -19,10 +19,10 @@ package trie
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/trie/trienode"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/ethdb"
+	"github.com/tenderly/net-xlayer/trie/trienode"
 	"github.com/ethereum/go-verkle"
 )
 

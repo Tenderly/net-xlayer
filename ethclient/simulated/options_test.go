@@ -22,10 +22,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer"
+	"github.com/tenderly/net-xlayer/core"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 // Tests that the simulator starts with the initial gas limit in the genesis block,

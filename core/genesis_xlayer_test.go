@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/core/rawdb"
+	"github.com/tenderly/net-xlayer/params"
 	"github.com/stretchr/testify/require"
 )
 

@@ -35,25 +35,25 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/signer/core"
-	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/ethereum/go-ethereum/signer/fourbyte"
-	"github.com/ethereum/go-ethereum/signer/rules"
-	"github.com/ethereum/go-ethereum/signer/storage"
+	"github.com/tenderly/net-xlayer/accounts"
+	"github.com/tenderly/net-xlayer/accounts/keystore"
+	"github.com/tenderly/net-xlayer/cmd/utils"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/hexutil"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/crypto"
+	"github.com/tenderly/net-xlayer/internal/ethapi"
+	"github.com/tenderly/net-xlayer/internal/flags"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/node"
+	"github.com/tenderly/net-xlayer/params"
+	"github.com/tenderly/net-xlayer/rlp"
+	"github.com/tenderly/net-xlayer/rpc"
+	"github.com/tenderly/net-xlayer/signer/core"
+	"github.com/tenderly/net-xlayer/signer/core/apitypes"
+	"github.com/tenderly/net-xlayer/signer/fourbyte"
+	"github.com/tenderly/net-xlayer/signer/rules"
+	"github.com/tenderly/net-xlayer/signer/storage"
 	"github.com/mattn/go-colorable"
 	"github.com/mattn/go-isatty"
 	"github.com/urfave/cli/v2"
@@ -873,7 +873,7 @@ func checkFile(filename string) error {
 	}
 	// Check the unix permission bits
 	// However, on windows, we cannot use the unix perm-bits, see
-	// https://github.com/ethereum/go-ethereum/issues/20123
+	// https://github.com/tenderly/net-xlayer/issues/20123
 	if runtime.GOOS != "windows" && info.Mode().Perm()&0377 != 0 {
 		return fmt.Errorf("file (%v) has insecure file permissions (%v)", filename, info.Mode().String())
 	}

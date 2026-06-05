@@ -24,11 +24,11 @@ import (
 	"regexp"
 	"slices"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/tests"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/rawdb"
+	"github.com/tenderly/net-xlayer/core/vm"
+	"github.com/tenderly/net-xlayer/internal/flags"
+	"github.com/tenderly/net-xlayer/tests"
 	"github.com/urfave/cli/v2"
 )
 

@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/ethtest"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/rlpx"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-xlayer/cmd/devp2p/internal/ethtest"
+	"github.com/tenderly/net-xlayer/crypto"
+	"github.com/tenderly/net-xlayer/p2p"
+	"github.com/tenderly/net-xlayer/p2p/enode"
+	"github.com/tenderly/net-xlayer/p2p/rlpx"
+	"github.com/tenderly/net-xlayer/rlp"
 	"github.com/urfave/cli/v2"
 )
 

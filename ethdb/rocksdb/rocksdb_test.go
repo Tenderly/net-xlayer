@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/ethdb/dbtest"
+	"github.com/tenderly/net-xlayer/ethdb"
+	"github.com/tenderly/net-xlayer/ethdb/dbtest"
 )
 
 func TestRocksDBSuite(t *testing.T) {
@@ -47,7 +47,7 @@ func TestRocksDBSuite(t *testing.T) {
 // sudo mkdir -p /mnt/tmpfs
 // sudo mount -t tmpfs -o size=16G tmpfs /mnt/tmpfs
 // Then run:
-// go test -benchmem -run=^$ -tags rocksdb -bench ^BenchmarkRocksDB$ github.com/ethereum/go-ethereum/ethdb/rocksdb
+// go test -benchmem -run=^$ -tags rocksdb -bench ^BenchmarkRocksDB$ github.com/tenderly/net-xlayer/ethdb/rocksdb
 func BenchmarkRocksDB(b *testing.B) {
 	dbtest.BenchDatabaseSuite(b, func() ethdb.KeyValueStore {
 		db, err := New(fmt.Sprintf("/mnt/tmpfs/bench-rocksdb-%d-%d", os.Getpid(), time.Now().UnixNano()), 16, 16, "", false)

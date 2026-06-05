@@ -17,8 +17,8 @@
 package database
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core/types"
 )
 
 // NodeReader wraps the Node method of a backing trie reader.

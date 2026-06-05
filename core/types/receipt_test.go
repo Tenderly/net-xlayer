@@ -25,9 +25,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/params"
+	"github.com/tenderly/net-xlayer/rlp"
 	"github.com/holiman/uint256"
 	"github.com/kylelemons/godebug/diff"
 )

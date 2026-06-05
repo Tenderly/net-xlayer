@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/eth/ethconfig"
+	"github.com/tenderly/net-xlayer/node"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 func TestSignalSuperchainV1(t *testing.T) {

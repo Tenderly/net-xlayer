@@ -19,15 +19,15 @@ package state
 import (
 	"errors"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/lru"
-	"github.com/ethereum/go-ethereum/core/state/snapshot"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie/utils"
-	"github.com/ethereum/go-ethereum/triedb"
-	"github.com/ethereum/go-ethereum/triedb/pathdb"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/lru"
+	"github.com/tenderly/net-xlayer/core/state/snapshot"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/ethdb"
+	"github.com/tenderly/net-xlayer/rlp"
+	"github.com/tenderly/net-xlayer/trie/utils"
+	"github.com/tenderly/net-xlayer/triedb"
+	"github.com/tenderly/net-xlayer/triedb/pathdb"
 )
 
 // historicReader wraps a historical state reader defined in path database,

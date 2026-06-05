@@ -3,14 +3,14 @@ package utils
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-xlayer/eth"
+	"github.com/tenderly/net-xlayer/eth/filters"
+	"github.com/tenderly/net-xlayer/node"
+	"github.com/tenderly/net-xlayer/rpc"
 
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/internal/flags"
+	"github.com/tenderly/net-xlayer/eth/ethconfig"
+	"github.com/tenderly/net-xlayer/internal/ethapi"
+	"github.com/tenderly/net-xlayer/internal/flags"
 	"github.com/urfave/cli/v2"
 )
 

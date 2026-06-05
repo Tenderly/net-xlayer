@@ -29,9 +29,9 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/math"
+	"github.com/tenderly/net-xlayer/rlp"
 )
 
 // SignatureLength indicates the byte length required to carry a signature with recovery id.

@@ -20,9 +20,9 @@ import (
 	"crypto/ecdsa"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/kzg4844"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/crypto"
+	"github.com/tenderly/net-xlayer/crypto/kzg4844"
 	"github.com/holiman/uint256"
 )
 

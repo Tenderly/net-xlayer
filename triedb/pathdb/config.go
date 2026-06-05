@@ -19,9 +19,9 @@ package pathdb
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 const (

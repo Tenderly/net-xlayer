@@ -3,9 +3,9 @@ package core
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-xlayer/core/state"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/metrics"
 )
 
 func logStatistic(block *types.Block, statedb *state.StateDB, start time.Time, ptime time.Duration, vtime time.Duration, triehash time.Duration, trieUpdate time.Duration, xvtime time.Duration, wstart time.Time, proctime time.Duration) {

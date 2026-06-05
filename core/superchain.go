@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/superchain"
+	"github.com/tenderly/net-xlayer/superchain"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/params"
 )
 
 func LoadOPStackGenesis(chainID uint64) (*Genesis, error) {

@@ -24,14 +24,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/catalyst"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/hexutil"
+	"github.com/tenderly/net-xlayer/eth"
+	"github.com/tenderly/net-xlayer/eth/catalyst"
+	"github.com/tenderly/net-xlayer/eth/ethconfig"
+	"github.com/tenderly/net-xlayer/internal/utesting"
+	"github.com/tenderly/net-xlayer/node"
+	"github.com/tenderly/net-xlayer/p2p"
 )
 
 func makeJWTSecret(t *testing.T) (string, [32]byte, error) {

@@ -29,9 +29,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/metrics"
 	"github.com/golang/snappy"
 )
 

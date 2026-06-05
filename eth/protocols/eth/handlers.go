@@ -22,13 +22,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/tracker"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/core"
+	"github.com/tenderly/net-xlayer/core/types"
+	"github.com/tenderly/net-xlayer/log"
+	"github.com/tenderly/net-xlayer/p2p/tracker"
+	"github.com/tenderly/net-xlayer/rlp"
+	"github.com/tenderly/net-xlayer/trie"
 )
 
 // requestTracker is a singleton tracker for eth/66 and newer request times.

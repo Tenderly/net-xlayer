@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-xlayer/common"
 )
 
 // StatsStore is a simple TTL store for propose stats snapshots keyed by block hash.

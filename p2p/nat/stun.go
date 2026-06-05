@@ -25,7 +25,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-xlayer/log"
 	stunV2 "github.com/pion/stun/v2"
 )
 

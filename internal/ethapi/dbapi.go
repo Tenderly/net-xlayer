@@ -17,8 +17,8 @@
 package ethapi
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-xlayer/common"
+	"github.com/tenderly/net-xlayer/common/hexutil"
 )
 
 // DbGet returns the raw value of a key stored in the database.
