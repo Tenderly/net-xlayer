@@ -194,6 +194,8 @@ const (
 	Bls12381G2MulMaxInputSizeJovian   uint64 = 278784 // BLS12-381 G2 MSM limit (968 pairs)
 	Bls12381PairingMaxInputSizeJovian uint64 = 156672 // BLS12-381 pairing limit (408 pairs)
 
+	Bn256PairingMaxInputSizeKarst uint64 = 57600 // bn256Pairing limit (300 pairs)
+
 	// The Refund Quotient is the cap on how much of the used gas can be refunded. Before EIP-3529,
 	// up to half the consumed gas could be refunded. Redefined as 1/5th in EIP-3529
 	RefundQuotient        uint64 = 2

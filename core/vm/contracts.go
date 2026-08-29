@@ -251,7 +251,34 @@ var PrecompiledContractsJovian = map[common.Address]PrecompiledContract{
 	common.BytesToAddress([]byte{0x01, 0x00}): &p256VerifyFjord{},
 }
 
+// PrecompiledContractsKarst is the Jovian precompile set with Osaka's p256Verify
+// replacing p256VerifyFjord, the Osaka ModExp EIPs (EIP-7823, EIP-7883) enabled,
+// and the bn256Pairing input limit reduced to 300 pairs (op PR #20250).
+// Karst (the OP Stack Osaka-aligned hard fork) activates when both Jovian and
+// Osaka are active on an OP chain.
+var PrecompiledContractsKarst = map[common.Address]PrecompiledContract{
+	common.BytesToAddress([]byte{1}):          &ecrecover{},
+	common.BytesToAddress([]byte{2}):          &sha256hash{},
+	common.BytesToAddress([]byte{3}):          &ripemd160hash{},
+	common.BytesToAddress([]byte{4}):          &dataCopy{},
+	common.BytesToAddress([]byte{5}):          &bigModExp{eip2565: true, eip7823: true, eip7883: true},
+	common.BytesToAddress([]byte{6}):          &bn256AddIstanbul{},
+	common.BytesToAddress([]byte{7}):          &bn256ScalarMulIstanbul{},
+	common.BytesToAddress([]byte{8}):          &bn256PairingKarst{},
+	common.BytesToAddress([]byte{9}):          &blake2F{},
+	common.BytesToAddress([]byte{0x0a}):       &kzgPointEvaluation{},
+	common.BytesToAddress([]byte{0x0b}):       &bls12381G1Add{},
+	common.BytesToAddress([]byte{0x0c}):       &bls12381G1MultiExpJovian{},
+	common.BytesToAddress([]byte{0x0d}):       &bls12381G2Add{},
+	common.BytesToAddress([]byte{0x0e}):       &bls12381G2MultiExpJovian{},
+	common.BytesToAddress([]byte{0x0f}):       &bls12381PairingJovian{},
+	common.BytesToAddress([]byte{0x10}):       &bls12381MapG1{},
+	common.BytesToAddress([]byte{0x11}):       &bls12381MapG2{},
+	common.BytesToAddress([]byte{0x01, 0x00}): &p256Verify{},
+}
+
 var (
+	PrecompiledAddressesKarst     []common.Address
 	PrecompiledAddressesJovian    []common.Address
 	PrecompiledAddressesIsthmus   []common.Address
 	PrecompiledAddressesGranite   []common.Address
@@ -299,11 +326,16 @@ func init() {
 	for k := range PrecompiledContractsJovian {
 		PrecompiledAddressesJovian = append(PrecompiledAddressesJovian, k)
 	}
+	for k := range PrecompiledContractsKarst {
+		PrecompiledAddressesKarst = append(PrecompiledAddressesKarst, k)
+	}
 }
 
 func activePrecompiledContracts(rules params.Rules) PrecompiledContracts {
 	// note: the order of these switch cases is important
 	switch {
+	case rules.IsOptimismJovian && rules.IsOsaka:
+		return PrecompiledContractsKarst
 	case rules.IsOptimismJovian:
 		return PrecompiledContractsJovian
 	case rules.IsOptimismIsthmus:
@@ -339,6 +371,8 @@ func ActivePrecompiledContracts(rules params.Rules) PrecompiledContracts {
 // ActivePrecompiles returns the precompile addresses enabled with the current configuration.
 func ActivePrecompiles(rules params.Rules) []common.Address {
 	switch {
+	case rules.IsOptimismJovian && rules.IsOsaka:
+		return PrecompiledAddressesKarst
 	case rules.IsOptimismJovian:
 		return PrecompiledAddressesJovian
 	case rules.IsOptimismIsthmus:
@@ -956,6 +990,25 @@ func (c *bn256PairingJovian) Run(input []byte) ([]byte, error) {
 }
 
 func (c *bn256PairingJovian) Name() string {
+	return "BN254_PAIRING"
+}
+
+// bn256PairingKarst implements a pairing pre-compile for the bn256 curve
+// conforming to Karst consensus rules.
+type bn256PairingKarst struct{}
+
+func (c *bn256PairingKarst) RequiredGas(input []byte) uint64 {
+	return new(bn256PairingIstanbul).RequiredGas(input)
+}
+
+func (c *bn256PairingKarst) Run(input []byte) ([]byte, error) {
+	if len(input) > int(params.Bn256PairingMaxInputSizeKarst) {
+		return nil, errBadPairingInputSize
+	}
+	return runBn256Pairing(input)
+}
+
+func (c *bn256PairingKarst) Name() string {
 	return "BN254_PAIRING"
 }
 
