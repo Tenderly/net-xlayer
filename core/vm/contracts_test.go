@@ -78,6 +78,7 @@ var allPrecompiles = map[common.Address]PrecompiledContract{
 	common.BytesToAddress([]byte{0x2f, 0x08}): &bn256PairingJovian{},
 	common.BytesToAddress([]byte{0x2f, 0x0e}): &bls12381PairingJovian{},
 	common.BytesToAddress([]byte{0x2f, 0x0b}): &bls12381G1MultiExpJovian{},
+	common.BytesToAddress([]byte{0x3f, 0x08}): &bn256PairingKarst{},
 	common.BytesToAddress([]byte{0x2f, 0x0d}): &bls12381G2MultiExpJovian{},
 }
 
@@ -342,6 +343,40 @@ func TestPrecompileBlsInputSize(t *testing.T) {
 }
 
 func TestPrecompiledEcrecover(t *testing.T) { testJson("ecRecover", "01", t) }
+
+func TestPrecompileBn256PairingKarstInputSizeLimit(t *testing.T) {
+	// The Karst boundary case is only meaningful if it would have passed the Jovian check.
+	if params.Bn256PairingMaxInputSizeKarst+1 > params.Bn256PairingMaxInputSizeJovian {
+		t.Fatalf("Karst limit (%d) must be below the Jovian limit (%d)",
+			params.Bn256PairingMaxInputSizeKarst, params.Bn256PairingMaxInputSizeJovian)
+	}
+	testPrecompiledFailure("3f08", precompiledFailureTest{
+		Input:         common.Bytes2Hex(make([]byte, params.Bn256PairingMaxInputSizeKarst+1)),
+		ExpectedError: "bad elliptic curve pairing input size",
+		Name:          "bn256Pairing_karst_input_too_big",
+	}, t)
+}
+
+func TestActivePrecompiledContractsBn256Pairing(t *testing.T) {
+	addr := common.BytesToAddress([]byte{8})
+	tests := []struct {
+		name  string
+		rules params.Rules
+		want  PrecompiledContract
+	}{
+		{"jovian", params.Rules{IsOptimismJovian: true}, &bn256PairingJovian{}},
+		{"karst", params.Rules{IsOptimismJovian: true, IsOsaka: true}, &bn256PairingKarst{}},
+		{"osaka_only", params.Rules{IsOsaka: true}, &bn256PairingIstanbul{}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := activePrecompiledContracts(tt.rules)[addr]
+			if fmt.Sprintf("%T", got) != fmt.Sprintf("%T", tt.want) {
+				t.Errorf("precompile at %v: got %T, want %T", addr, got, tt.want)
+			}
+		})
+	}
+}
 
 func TestPrecompileJovianInputSizeLimits(t *testing.T) {
 	const (
